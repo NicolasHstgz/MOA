@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #2C3863;
+    background-attachment: fixed;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 3rem;
+    background-color: #4D63B0;
+    box-shadow: 0px 4px 4px 0px #1C264840,
+    0px 4px 4px 0px #1C264840,
+    0px 4px 4px 0px #1C264840;
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+}
+
+/*.name {
+    color: #EEEEEE;
+    font-size: 42px;
+    font-weight: bold;
+}*/
+
+.figure-logo, .logo {
+    width: 165px;
+    height: 135px;
+    cursor: pointer;
+}
+
+.navbar {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header a {
+    font-weight: bold;
+    transition: all 0.6s;
+    -webkit-transition: all 0.6s;
+}
+
+.navbar a{
+    padding: 1.5rem 0;
+    color: #EEEEEE;
+}
+
+.navbar a:hover {
+    transform: scale(0.90);
+    text-decoration: underline;
+}
+
+.burguer-menu {
+    width: 40px;
+    height: 35px;
+    display: none;
+}
+
+.menu-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 75vw;
+    height: 100vh;
+    background-color: #4D63B0;
+    box-shadow: 1px 1px 5px #2C3863;
+    position: absolute;
+    top: 0;
+    left: -100vw;
+    transition: all 0.4s;
+}
+
+.menu-area a {
+    font-size: 24px;
+    padding: 2rem 3.5rem;
+    color: #EEEEEE
+}
+
+.close-menu {
+    color: #EEEEEE;
+    font-size: 24px;
+    padding: 1.2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Responsivo */
+
+@media screen and (max-width: 970px) {
+    .name {
+        font-size: 32px;
+    }
+
+    .figure-logo, .logo {
+        width: 125px;
+        height: 125px;
+    }
+
+    .navbar {
+        justify-content: flex-end;
+    }
+    
+    .navbar a {
+        display: none;
+    }
+
+    .burguer-menu {
+        display: block;
+    }
+
+    .menu-area-active {
+        left: 0;
+        top: 0;
+        transition: all 0.4s;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .figure-logo, .logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .name {
+        font-size: 22px;
+    }
+
+    .burguer-menu {
+        width: 30px;
+        height: 30px;
+    }
+}
